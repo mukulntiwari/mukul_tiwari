@@ -5,8 +5,8 @@ def x(n):
         return y[:n + 1]
 
     for i in range(2, n + 1):
-        next_number = y[i - 1] + y[i - 2]
-        y.append(next_number)
+        nextnumber = y[i - 1] + y[i - 2]
+        y.append(nextnumber)
 
     return y
 
