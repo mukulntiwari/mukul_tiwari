@@ -3,26 +3,12 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use App\Models\User;
 use App\Models\Product;
 
-class DatabaseSeeder extends Seeder
+class ProductSeeder extends Seeder
 {
     public function run(): void
     {
-        // Clean users and products table
-        DB::table('users')->truncate();
-        DB::table('products')->truncate();
-
-        // Create a default test user
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-            'password' => bcrypt('password'),
-        ]);
-
-        // Create sample products
         Product::create([
             'name' => 'Wooden Chair',
             'description' => 'A stylish wooden chair with ergonomic design.',
@@ -44,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Modern 5-tier bookshelf made of engineered wood.',
             'price' => 1800,
             'quantity' => 8,
-            'image' => 'images/bookshelf.jpg',
+            'image' => 'images/bookshelf.webp',
         ]);
 
         Product::create([
